@@ -1,9 +1,21 @@
+<div class="tool-bar">
+  <input type="text" ng-model="$ctrl.searchTerm" ng-change="$ctrl.search()" placeholder="Search"/>
+  <div>
+    <label>sort:</label>
+    <select ng-model="$ctrl.sort" ng-change="$ctrl.sortChange()" ng-options="header.label as header.label for header in $ctrl.collection.headers">
+      <!-- <option ng-repeat=" value="{{ $index }}" ng-bind="header.label"></option> -->
+    </select>
+    <select ng-model="$ctrl.sortDir" ng-change="$ctrl.sortChange()" ng-options="dir.val as dir.label for dir in $ctrl.sortDirOpts">
+    </select>
+  </div>
+</div>
+
 <table class="table">
   <caption>Company Devices</caption>
   <thead>
     <tr>
       <th ng-repeat="header in $ctrl.collection.headers track by $index"
-          ng-bind="header.full_label">
+          ng-bind="header.label">
       </th>
     </tr>
   </thead>
