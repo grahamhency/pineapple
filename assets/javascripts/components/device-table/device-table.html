@@ -3,7 +3,6 @@
   <div>
     <label>sort:</label>
     <select ng-model="$ctrl.sort" ng-change="$ctrl.sortChange()" ng-options="header.label as header.label for header in $ctrl.collection.headers">
-      <!-- <option ng-repeat=" value="{{ $index }}" ng-bind="header.label"></option> -->
     </select>
     <select ng-model="$ctrl.sortDir" ng-change="$ctrl.sortChange()" ng-options="dir.val as dir.label for dir in $ctrl.sortDirOpts">
     </select>
