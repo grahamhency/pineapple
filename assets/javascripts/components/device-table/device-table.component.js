@@ -35,6 +35,12 @@
       }
     }
 
+    vm.clearSearch = function(){
+      vm.searchTerm = null;
+      vm.search();
+      document.getElementById("searchBox").focus();
+    }
+
     vm.sortChange = function(){
       vm.sortIndex = vm.collection.headers.indexOf(vm.collection.headers.find(function(i){ return i.label == vm.sort }));
       vm.collection.rows.sort(sortRows);

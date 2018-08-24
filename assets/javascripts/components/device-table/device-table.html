@@ -1,5 +1,8 @@
 <div class="tool-bar">
-  <input type="text" ng-model="$ctrl.searchTerm" ng-change="$ctrl.search()" placeholder="Search"/>
+  <div>
+    <input type="text" id="searchBox" ng-model="$ctrl.searchTerm" ng-change="$ctrl.search()" placeholder="Search"/>
+    <button type="button" ng-click="$ctrl.clearSearch()">clear</button>
+  </div>
   <div>
     <label>sort:</label>
     <select ng-model="$ctrl.sort" ng-change="$ctrl.sortChange()" ng-options="header.label as header.label for header in $ctrl.collection.headers">
