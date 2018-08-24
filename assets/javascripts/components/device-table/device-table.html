@@ -10,7 +10,10 @@
 </div>
 
 <table class="table">
-  <caption>Company Devices</caption>
+  <caption>
+    <span>Company Devices</span>
+    <span>Total: {{ $ctrl.collection.rows.length }} / {{ $ctrl.rawRows.length }}</span>
+  </caption>
   <thead>
     <tr>
       <th ng-repeat="header in $ctrl.collection.headers track by $index"
@@ -18,11 +21,16 @@
       </th>
     </tr>
   </thead>
-  <tbody>
+  <tbody ng-if="$ctrl.collection.rows.length > 0">
     <tr ng-repeat="row in $ctrl.collection.rows">
       <td ng-repeat="column in row track by $index"
           ng-bind="column">
       </td>
     </tr>
+  </tbody>
+  <tbody ng-if="$ctrl.collection.rows.length == 0">
+      <tr>
+        <td colspan="4" class="no-content">No search results found.</td>
+      </tr>
   </tbody>
 </table>

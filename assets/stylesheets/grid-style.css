@@ -5,7 +5,9 @@
 	padding: 10px 0;
 }
 
-.tool-bar > input { height: 30px; }
-.tool-bar > div > select { height: 30px; }
+.tool-bar > input { height: 30px; padding: 3px 6px; }
+.tool-bar > div > select { height: 30px; padding: 3px 6px; }
 .tool-bar > div { align-self: center; }
 .tool-bar > label { margin-bottom: 0; }
+.table > caption { padding: 8px; background: #e1e1e1; }
+.table > caption > span:last-of-type{ float: right; }
