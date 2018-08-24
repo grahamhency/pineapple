@@ -10,7 +10,7 @@ describe('Component: deviceTable', function() {
 
   var vm, scope, deviceFactory, $q, deviceFixture;
 
-  beforeAll(function() { // jshint ignore: line
+  beforeAll(function() {
     module('deviceFactory');
     module(subject.module);
 
